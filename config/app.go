@@ -27,19 +27,19 @@ func InitEnv() error {
 		PORT = "8080"
 	}
 	if v := os.Getenv("DB_URL"); v == "" {
-		return fmt.Errorf("DB_URL is required")
+		DB_URL = "mongodb://localhost:27017/"
 	} else {
 		DB_URL = v
 	}
 	if v := os.Getenv("DB_NAME"); v == "" {
-		return fmt.Errorf("DB_NAME is required")
+		DB_NAME = "cctv_db"
 	} else {
 		DB_NAME = v
 	}
-	if v := os.Getenv("SECRETKEY"); v != "" {
-		SECRETKEY = v
+	if v := os.Getenv("SECRETKEY"); v == "" {
+		SECRETKEY = "maulana"
 	} else {
-		SECRETKEY = "hallo_saya_maulana"
+		SECRETKEY = v
 	}
 	return nil
 }
