@@ -1,0 +1,1106 @@
+{
+	"info": {
+		"_postman_id": "c9808a7e-7841-4829-b4a9-40ab33a05118",
+		"name": "Gin_Maulana_CttvApps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3771199",
+		"_collection_link": "https://orange-space-964836.postman.co/workspace/Kerjaan~435f7e49-d002-478f-a079-a4fe868d2d20/collection/3771199-c9808a7e-7841-4829-b4a9-40ab33a05118?action=share&source=collection_link&creator=3771199"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"admin@admin.com\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"admin@admin.com\",\r\n    \"password\" : \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:36:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1159"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User logged in successfully\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjOTc1YmEzZWRlYjI2Y2JhNTZiYWFkIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTg2MzgxNzF9.DSE7pEPEKXZtZjkX0n7OXGfQE4ZrTxQ0JoSLDWcJrdU\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjOTc1YmEzZWRlYjI2Y2JhNTZiYWFkIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgxMTk3NzF9.BqH2FRXstwL0ZSpzcgYfeOB-tkSwR_wl-WhB5cRyxYw\",\n    \"user\": {\n        \"ID\": \"68c975ba3edeb26cba56baad\",\n        \"first_name\": \"Maulana\",\n        \"last_name\": \"Rahman\",\n        \"email\": \"admin@admin.com\",\n        \"password\": \"$2a$10$trA4eoDEGTfnWvsuqUyO4.4zJVQFAJVvrhdMoK9gBGiyA6RK3Ck0e\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjOTc1YmEzZWRlYjI2Y2JhNTZiYWFkIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgxMTk3NzF9.BqH2FRXstwL0ZSpzcgYfeOB-tkSwR_wl-WhB5cRyxYw\",\n        \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjOTc1YmEzZWRlYjI2Y2JhNTZiYWFkIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTg2MzgxNzF9.DSE7pEPEKXZtZjkX0n7OXGfQE4ZrTxQ0JoSLDWcJrdU\",\n        \"created_at\": \"2025-09-16T14:35:38.838Z\",\n        \"updated_at\": \"2025-09-16T14:35:38.838Z\",\n        \"user_id\": \"68c975ba3edeb26cba56baad\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"kapal@laud.com\",\r\n    \"password\" : \"123456\",\r\n    \"first_name\" : \"Budiono\",\r\n    \"last_name\" : \"Siregar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/signup",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"kapal@laud.com\",\r\n    \"password\" : \"123456\",\r\n    \"first_name\" : \"Budiono\",\r\n    \"last_name\" : \"Siregar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/signup",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:35:55 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "366"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully\",\n    \"results\": {\n        \"ID\": \"68c975cb3edeb26cba56baae\",\n        \"first_name\": \"Budiono\",\n        \"last_name\": \"Siregar\",\n        \"email\": \"kapal@laud.com\",\n        \"password\": null,\n        \"created_at\": \"2025-09-16T21:35:55.9720935+07:00\",\n        \"updated_at\": \"2025-09-16T21:35:55.9720935+07:00\",\n        \"user_id\": \"68c975cb3edeb26cba56baae\"\n    },\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-09-16T21:35:55.9731029+07:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get current user login",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjOTc1YmEzZWRlYjI2Y2JhNTZiYWFkIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgxMTk3NzF9.BqH2FRXstwL0ZSpzcgYfeOB-tkSwR_wl-WhB5cRyxYw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/user/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get current user login",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjOTc1YmEzZWRlYjI2Y2JhNTZiYWFkIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgxMTk3NzF9.BqH2FRXstwL0ZSpzcgYfeOB-tkSwR_wl-WhB5cRyxYw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/user/me",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:36:29 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "436"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ID\": \"68c975ba3edeb26cba56baad\",\n    \"first_name\": \"Maulana\",\n    \"last_name\": \"Rahman\",\n    \"email\": \"admin@admin.com\",\n    \"password\": null,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjOTc1YmEzZWRlYjI2Y2JhNTZiYWFkIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgxMTk3NzF9.BqH2FRXstwL0ZSpzcgYfeOB-tkSwR_wl-WhB5cRyxYw\",\n    \"created_at\": \"2025-09-16T14:35:38.838Z\",\n    \"updated_at\": \"2025-09-16T14:36:11.332Z\",\n    \"user_id\": \"68c975ba3edeb26cba56baad\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/users/?email[$like]=@admin.com&page=2&limit=2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "email[$like]",
+									"value": "@admin.com"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/users/?page=1&limit=100&email[$like]=@admin.com&order_by=first_name",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "email[$like]",
+											"value": "@admin.com"
+										},
+										{
+											"key": "order_by",
+											"value": "first_name"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:36:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "699"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully get all users\",\n    \"results\": {\n        \"list\": [\n            {\n                \"ID\": \"68c975cb3edeb26cba56baae\",\n                \"first_name\": \"Budiono\",\n                \"last_name\": \"Siregar\",\n                \"email\": \"kapal@laud.com\",\n                \"password\": null,\n                \"created_at\": \"2025-09-16T14:35:55.972Z\",\n                \"updated_at\": \"2025-09-16T14:35:55.972Z\",\n                \"user_id\": \"68c975cb3edeb26cba56baae\"\n            },\n            {\n                \"ID\": \"68c975ba3edeb26cba56baad\",\n                \"first_name\": \"Maulana\",\n                \"last_name\": \"Rahman\",\n                \"email\": \"admin@admin.com\",\n                \"password\": null,\n                \"created_at\": \"2025-09-16T14:35:38.838Z\",\n                \"updated_at\": \"2025-09-16T14:36:11.332Z\",\n                \"user_id\": \"68c975ba3edeb26cba56baad\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 100,\n            \"total_count\": 2,\n            \"total_pages\": 1,\n            \"has_next\": false,\n            \"has_prev\": false\n        }\n    },\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-09-16T21:36:38.6669321+07:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/users/68c975cb3edeb26cba56baae",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"68c975cb3edeb26cba56baae"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/users/68c975cb3edeb26cba56baae",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"68c975cb3edeb26cba56baae"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:37:01 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "402"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully get user\",\n    \"results\": {\n        \"ID\": \"68c975cb3edeb26cba56baae\",\n        \"first_name\": \"Budiono\",\n        \"last_name\": \"Siregar\",\n        \"email\": \"kapal@laud.com\",\n        \"password\": \"$2a$10$KooTDqvIppg6RFSYwVNerOyWVmdN2mO8iuFQlUgUOPo2jNhbx.giW\",\n        \"created_at\": \"2025-09-16T14:35:55.972Z\",\n        \"updated_at\": \"2025-09-16T14:35:55.972Z\",\n        \"user_id\": \"68c975cb3edeb26cba56baae\"\n    },\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-09-16T21:37:01.0212527+07:00\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/contacts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/contacts",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contacts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:23:30 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1075"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully get all Contact\",\n    \"results\": {\n        \"list\": [\n            {\n                \"ID\": \"68c92144c02cb5c24ff29667\",\n                \"first_name\": \"Maualana \",\n                \"last_name\": \"R\",\n                \"email\": \"asdx@as.com\",\n                \"phone\": \"123123\",\n                \"address\": \"Kp. Kamurang Bogor\",\n                \"created_at\": \"2025-09-16T08:35:16.741Z\",\n                \"updated_at\": \"2025-09-16T08:35:16.741Z\",\n                \"contact_id\": \"68c92144c02cb5c24ff29667\",\n                \"cctvs\": [\n                    {\n                        \"ID\": \"68c92ce6f440bc8e43db64bb\",\n                        \"cctv_id\": \"68c92ce6f440bc8e43db64bb\",\n                        \"contact_id\": \"68c92144c02cb5c24ff29667\",\n                        \"name\": \"CCTV Xendit A1\",\n                        \"location\": \"Ruang Tamu\",\n                        \"ip_address\": \"1.2.3.4\",\n                        \"brand\": \"Xendit\",\n                        \"model\": \"A1\",\n                        \"status\": \"online\",\n                        \"created_at\": \"2025-09-16T09:24:54.488Z\",\n                        \"updated_at\": \"2025-09-16T09:24:54.488Z\"\n                    }\n                ]\n            },\n            {\n                \"ID\": \"68c972849d4d64b6223d4140\",\n                \"first_name\": \"Budiman\",\n                \"last_name\": \"R\",\n                \"email\": \"asdxx@as.com\",\n                \"phone\": \"123123\",\n                \"address\": \"Kp. Kamurang Bogor\",\n                \"created_at\": \"2025-09-16T14:21:56.111Z\",\n                \"updated_at\": \"2025-09-16T14:21:56.111Z\",\n                \"contact_id\": \"68c972849d4d64b6223d4140\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total_count\": 2,\n            \"total_pages\": 1,\n            \"has_next\": false,\n            \"has_prev\": false\n        }\n    },\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-09-16T21:23:30.8337378+07:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/contacts/68c91ddc84196258f54530e6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contacts",
+								"68c91ddc84196258f54530e6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/contacts/68c92144c02cb5c24ff29667",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contacts",
+										"68c92144c02cb5c24ff29667"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:23:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "695"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully get Contact\",\n    \"results\": {\n        \"ID\": \"68c92144c02cb5c24ff29667\",\n        \"first_name\": \"Maualana \",\n        \"last_name\": \"R\",\n        \"email\": \"asdx@as.com\",\n        \"phone\": \"123123\",\n        \"address\": \"Kp. Kamurang Bogor\",\n        \"created_at\": \"2025-09-16T08:35:16.741Z\",\n        \"updated_at\": \"2025-09-16T08:35:16.741Z\",\n        \"contact_id\": \"68c92144c02cb5c24ff29667\",\n        \"cctvs\": [\n            {\n                \"ID\": \"68c92ce6f440bc8e43db64bb\",\n                \"cctv_id\": \"68c92ce6f440bc8e43db64bb\",\n                \"contact_id\": \"68c92144c02cb5c24ff29667\",\n                \"name\": \"CCTV Xendit A1\",\n                \"location\": \"Ruang Tamu\",\n                \"ip_address\": \"1.2.3.4\",\n                \"brand\": \"Xendit\",\n                \"model\": \"A1\",\n                \"status\": \"online\",\n                \"created_at\": \"2025-09-16T09:24:54.488Z\",\n                \"updated_at\": \"2025-09-16T09:24:54.488Z\"\n            }\n        ]\n    },\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-09-16T21:23:32.8399427+07:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\" : \"Bima\",\r\n    \"last_name\" : \"Sakti\",\r\n    \"email\" : \"bisa@as.com\",\r\n    \"phone\" : \"0812322123123\",\r\n    \"address\" : \"Kp. Kamurang Bogor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/contacts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\" : \"Bima\",\r\n    \"last_name\" : \"Sakti\",\r\n    \"email\" : \"bisa@as.com\",\r\n    \"phone\" : \"0812322123123\",\r\n    \"address\" : \"Kp. Kamurang Bogor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/contacts",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contacts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:37:41 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "403"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Contact created successfully\",\n    \"results\": {\n        \"ID\": \"68c976353edeb26cba56bab0\",\n        \"first_name\": \"Bima\",\n        \"last_name\": \"Sakti\",\n        \"email\": \"bisa@as.com\",\n        \"phone\": \"0812322123123\",\n        \"address\": \"Kp. Kamurang Bogor\",\n        \"created_at\": \"2025-09-16T21:37:41.4667984+07:00\",\n        \"updated_at\": \"2025-09-16T21:37:41.4667984+07:00\",\n        \"contact_id\": \"68c976353edeb26cba56bab0\"\n    },\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-09-16T21:37:41.4673093+07:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\" : \"KOKO \",\r\n    \"last_name\" : \"Melon\",\r\n    \"email\" : \"asd@as.com\",\r\n    \"phone\" : \"123123\",\r\n    \"address\" : \"Kp. Kamurang Bogor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/contacts/68c91ddc84196258f54530e6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contacts",
+								"68c91ddc84196258f54530e6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/contacts/68c91ddc84196258f54530e6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contacts",
+								"68c91ddc84196258f54530e6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CCTV",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/cctvs",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cctvs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/cctvs",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cctvs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:39:09 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully get all CCTV\",\n    \"results\": {\n        \"list\": [\n            {\n                \"ID\": \"68c9765d3edeb26cba56bab1\",\n                \"cctv_id\": \"68c9765d3edeb26cba56bab1\",\n                \"contact_id\": \"68c976243edeb26cba56baaf\",\n                \"name\": \"CCTV Xendit A12\",\n                \"location\": \"Carport\",\n                \"ip_address\": \"1.2.3.5\",\n                \"brand\": \"Xendit\",\n                \"model\": \"A12\",\n                \"status\": \"offline\",\n                \"created_at\": \"2025-09-16T14:38:21.571Z\",\n                \"updated_at\": \"2025-09-16T14:38:21.571Z\",\n                \"contact\": {\n                    \"ID\": \"68c976243edeb26cba56baaf\",\n                    \"first_name\": \"Handoko\",\n                    \"last_name\": \"Rumyo\",\n                    \"email\": \"hanrum@as.com\",\n                    \"phone\": \"08123123123\",\n                    \"address\": \"Kp. Kamurang Bogor\",\n                    \"created_at\": \"2025-09-16T14:37:24.909Z\",\n                    \"updated_at\": \"2025-09-16T14:37:24.909Z\",\n                    \"contact_id\": \"68c976243edeb26cba56baaf\"\n                }\n            },\n            {\n                \"ID\": \"68c976683edeb26cba56bab2\",\n                \"cctv_id\": \"68c976683edeb26cba56bab2\",\n                \"contact_id\": \"68c976243edeb26cba56baaf\",\n                \"name\": \"CCTV Xendit A12\",\n                \"location\": \"Ruang Tengah\",\n                \"ip_address\": \"1.2.3.1\",\n                \"brand\": \"Xendit\",\n                \"model\": \"A12\",\n                \"status\": \"online\",\n                \"created_at\": \"2025-09-16T14:38:32.184Z\",\n                \"updated_at\": \"2025-09-16T14:38:32.184Z\",\n                \"contact\": {\n                    \"ID\": \"68c976243edeb26cba56baaf\",\n                    \"first_name\": \"Handoko\",\n                    \"last_name\": \"Rumyo\",\n                    \"email\": \"hanrum@as.com\",\n                    \"phone\": \"08123123123\",\n                    \"address\": \"Kp. Kamurang Bogor\",\n                    \"created_at\": \"2025-09-16T14:37:24.909Z\",\n                    \"updated_at\": \"2025-09-16T14:37:24.909Z\",\n                    \"contact_id\": \"68c976243edeb26cba56baaf\"\n                }\n            },\n            {\n                \"ID\": \"68c9766f3edeb26cba56bab3\",\n                \"cctv_id\": \"68c9766f3edeb26cba56bab3\",\n                \"contact_id\": \"68c976243edeb26cba56baaf\",\n                \"name\": \"CCTV Xendit A12\",\n                \"location\": \"Ruang Baca\",\n                \"ip_address\": \"1.2.3.2\",\n                \"brand\": \"Xendit\",\n                \"model\": \"A12\",\n                \"status\": \"online\",\n                \"created_at\": \"2025-09-16T14:38:39.252Z\",\n                \"updated_at\": \"2025-09-16T14:38:39.252Z\",\n                \"contact\": {\n                    \"ID\": \"68c976243edeb26cba56baaf\",\n                    \"first_name\": \"Handoko\",\n                    \"last_name\": \"Rumyo\",\n                    \"email\": \"hanrum@as.com\",\n                    \"phone\": \"08123123123\",\n                    \"address\": \"Kp. Kamurang Bogor\",\n                    \"created_at\": \"2025-09-16T14:37:24.909Z\",\n                    \"updated_at\": \"2025-09-16T14:37:24.909Z\",\n                    \"contact_id\": \"68c976243edeb26cba56baaf\"\n                }\n            },\n            {\n                \"ID\": \"68c9768a3edeb26cba56bab4\",\n                \"cctv_id\": \"68c9768a3edeb26cba56bab4\",\n                \"contact_id\": \"68c976353edeb26cba56bab0\",\n                \"name\": \"CCTV Borzo\",\n                \"location\": \"Ruang Tengah\",\n                \"ip_address\": \"192.2.3.2\",\n                \"brand\": \"Borzo\",\n                \"model\": \"B123\",\n                \"status\": \"online\",\n                \"created_at\": \"2025-09-16T14:39:06.469Z\",\n                \"updated_at\": \"2025-09-16T14:39:06.469Z\",\n                \"contact\": {\n                    \"ID\": \"68c976353edeb26cba56bab0\",\n                    \"first_name\": \"Bima\",\n                    \"last_name\": \"Sakti\",\n                    \"email\": \"bisa@as.com\",\n                    \"phone\": \"0812322123123\",\n                    \"address\": \"Kp. Kamurang Bogor\",\n                    \"created_at\": \"2025-09-16T14:37:41.466Z\",\n                    \"updated_at\": \"2025-09-16T14:37:41.466Z\",\n                    \"contact_id\": \"68c976353edeb26cba56bab0\"\n                }\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total_count\": 4,\n            \"total_pages\": 1,\n            \"has_next\": false,\n            \"has_prev\": false\n        }\n    },\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-09-16T21:39:09.6130183+07:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/cctvs/68c976683edeb26cba56bab2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cctvs",
+								"68c976683edeb26cba56bab2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/cctvs/68c976683edeb26cba56bab2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cctvs",
+										"68c976683edeb26cba56bab2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:39:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "705"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully get CCTV\",\n    \"results\": {\n        \"ID\": \"68c976683edeb26cba56bab2\",\n        \"cctv_id\": \"68c976683edeb26cba56bab2\",\n        \"contact_id\": \"68c976243edeb26cba56baaf\",\n        \"name\": \"CCTV Xendit A12\",\n        \"location\": \"Ruang Tengah\",\n        \"ip_address\": \"1.2.3.1\",\n        \"brand\": \"Xendit\",\n        \"model\": \"A12\",\n        \"status\": \"online\",\n        \"created_at\": \"2025-09-16T14:38:32.184Z\",\n        \"updated_at\": \"2025-09-16T14:38:32.184Z\",\n        \"contact\": {\n            \"ID\": \"68c976243edeb26cba56baaf\",\n            \"first_name\": \"Handoko\",\n            \"last_name\": \"Rumyo\",\n            \"email\": \"hanrum@as.com\",\n            \"phone\": \"08123123123\",\n            \"address\": \"Kp. Kamurang Bogor\",\n            \"created_at\": \"2025-09-16T14:37:24.909Z\",\n            \"updated_at\": \"2025-09-16T14:37:24.909Z\",\n            \"contact_id\": \"68c976243edeb26cba56baaf\"\n        }\n    },\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-09-16T21:39:32.0037728+07:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contact_id\" : \"68c92144c02cb5c24ff29667\",\r\n    \"name\" : \"CCTV Xendit A1\",\r\n    \"location\" : \"Ruang Tamu\",\r\n    \"ip_address\" : \"1.2.3.4\",\r\n    \"brand\" : \"Xendit\",\r\n    \"model\" : \"A1\",\r\n    \"status\" : \"online\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/cctvs",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cctvs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"contact_id\" : \"68c976353edeb26cba56bab0\",\r\n    \"name\" : \"CCTV Borzo\",\r\n    \"location\" : \"Ruang Tengah\",\r\n    \"ip_address\" : \"192.2.3.2\",\r\n    \"brand\" : \"Borzo\",\r\n    \"model\" : \"B123\",\r\n    \"status\" : \"online\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/cctvs",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cctvs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Sep 2025 14:39:06 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "455"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"CCTV created successfully\",\n    \"results\": {\n        \"ID\": \"68c9768a3edeb26cba56bab4\",\n        \"cctv_id\": \"68c9768a3edeb26cba56bab4\",\n        \"contact_id\": \"68c976353edeb26cba56bab0\",\n        \"name\": \"CCTV Borzo\",\n        \"location\": \"Ruang Tengah\",\n        \"ip_address\": \"192.2.3.2\",\n        \"brand\": \"Borzo\",\n        \"model\": \"B123\",\n        \"status\": \"online\",\n        \"created_at\": \"2025-09-16T21:39:06.4693219+07:00\",\n        \"updated_at\": \"2025-09-16T21:39:06.4693219+07:00\",\n        \"contact\": null\n    },\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-09-16T21:39:06.4698305+07:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contact_id\" : \"68c92144c02cb5c24ff29667\",\r\n    \"name\" : \"CCTV Xendit A1\",\r\n    \"location\" : \"Ruang Tamu\",\r\n    \"ip_address\" : \"1.2.3.4\",\r\n    \"brand\" : \"Xendit\",\r\n    \"model\" : \"A1\",\r\n    \"status\" : \"online\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/cctvs/68c92c8bf440bc8e43db64ba",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cctvs",
+								"68c92c8bf440bc8e43db64ba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhjODI4ZTNmYTAwNTdmMGZkOGUzMzllIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NTgwMzQ2MDd9.m_5neE50NehnebFOkVLdwajE7kx08waal6ViqloWVcc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/cctvs/68c92c8bf440bc8e43db64ba",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cctvs",
+								"68c92c8bf440bc8e43db64ba"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
