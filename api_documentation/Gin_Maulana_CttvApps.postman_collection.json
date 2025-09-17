@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "c9808a7e-7841-4829-b4a9-40ab33a05118",
 		"name": "Gin_Maulana_CttvApps",
+		"description": "# AssistX Submission – Gin + MongoDB\n\nIni adalah project submission **AssistX** yang dibangun menggunakan **Gin Framework** (Golang) dan **MongoDB**.\n\n## Catatan\n\n- Jika environment variable **tidak di-set**, maka:\n    \n    - **Port** default yang digunakan adalah `8080`\n        \n    - **Database** default yang digunakan adalah `cctv_db`\n        \n\n## Modul\n\nProject ini terdiri dari 3 modul utama:\n\n1. **User (Auth)**  \n    Modul untuk autentikasi user.\n    \n2. **Contacts**  \n    Modul untuk mengelola data kontak.\n    \n3. **CCTVs**  \n    Modul untuk mengelola data kamera CCTV.\n    \n\n## Relasi\n\n- Modul **Contacts** dan **CCTVs** memiliki relasi **one-to-many**.\n    \n- Implementasi relasi dilakukan dengan **MongoDB** **`$lookup`**:\n    \n    - Satu **Contact** dapat memiliki banyak **CCTV**.\n        \n    - Data CCTV di-join berdasarkan `contact_id`.\n        \n\n## Teknologi\n\n- Golang + Gin\n    \n- MongoDB\n    \n- Validator (go-playground/validator)\n    \n- Gin middleware & utils custom\n    \n\n## Penggunaan Filter & Pagination\n\nSemua endpoint listing (mis. `/api/cctvs`, `/api/contacts`) mendukung **pagination**, **filtering**, dan (opsional) **sorting** melalui query string.\n\n### Parameter Pagination\n\n- `page` _(number, default: 1)_ – nomor halaman (1-based)\n    \n- `limit` _(number, default: 10/20 tergantung konfigurasi)_ – jumlah data per halaman\n    \n\nContoh:\n\n```\nGET /api/cctvs?page=1&limit=20\n\n ```\n\n### Operator Filter yang Didukung\n\nFormat umum: `field[$op]=value`\n\n| Operator | Arti | Contoh |\n| --- | --- | --- |\n| `$eq` | Sama dengan (exact match) | `name[$eq]=Lobby Cam` |\n| `$like` | Contains / regex sederhana (case-insens.) | `name[$like]=lobby` |\n| `$in` | Salah satu dari beberapa nilai | `status[$in]=active,inactive` _(comma-separated)_ |\n\n> \n\n  \n`$like` bersifat **case-insensitive** dan cocok untuk pencarian sebagian (contains).\n\n \n  \n\n### Parameter Sorting (opsional)\n\n- `order_by` – nama field yang di-sort, jika ada - didepannya maka dianggap DESC\n    \n\nContoh:\n\n```\nGET /api/cctvs?order_by=-first_name\n\n ```\n\n### Contoh Penggunaan (CCTVs)\n\n1. **Pagination dasar**\n    \n\n```\nGET /api/cctvs?page=1&limit=20\n\n ```\n\n1. **Filter by name (like) + exact (eq)**\n    \n\n```\nGET /api/cctvs?page=1&limit=20&name[$like]=budi\n\n ```\n\n1. **Filter** **`$in`** **(status salah satu dari beberapa nilai)**\n    \n\n```\nGET /api/cctvs?status[$in]=active&status[$in]=inactive\n\n\n\n ```\n\n---\n\n✦ Jalankan project ini untuk eksplorasi modul dan relasi dasar antara **contacts** ↔ **cctvs**.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "3771199",
 		"_collection_link": "https://orange-space-964836.postman.co/workspace/Kerjaan~435f7e49-d002-478f-a079-a4fe868d2d20/collection/3771199-c9808a7e-7841-4829-b4a9-40ab33a05118?action=share&source=collection_link&creator=3771199"
@@ -73,7 +74,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "Content-Type",
@@ -100,7 +101,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\" : \"kapal@laud.com\",\r\n    \"password\" : \"123456\",\r\n    \"first_name\" : \"Budiono\",\r\n    \"last_name\" : \"Siregar\"\r\n}",
+							"raw": "{\r\n    \"email\" : \"admin@admin.com\",\r\n    \"password\" : \"123456\",\r\n    \"first_name\" : \"Budiono\",\r\n    \"last_name\" : \"Siregar\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -156,7 +157,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "Content-Type",
@@ -235,7 +236,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "Content-Type",
@@ -351,7 +352,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "Content-Type",
@@ -430,7 +431,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "Content-Type",
@@ -512,7 +513,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "Content-Type",
@@ -686,7 +687,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "Content-Type",
@@ -837,7 +838,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "Content-Type",
@@ -916,7 +917,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "Content-Type",
@@ -1011,7 +1012,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "Content-Type",
@@ -1101,6 +1102,29 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Check Server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/ping",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ping"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
