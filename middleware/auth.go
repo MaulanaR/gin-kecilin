@@ -33,8 +33,8 @@ func Authenticate() gin.HandlerFunc {
 		claims, err := utils.ValidateToken(authHeader)
 		log.Printf("Claims: %v\n", claims)
 		if err != nil {
-			log.Printf("Token validation error: %v\n", err)
-			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid access token"})
+
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid access token or logged out"})
 			c.Abort()
 			return
 		}

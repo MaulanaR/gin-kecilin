@@ -25,6 +25,7 @@ func SetRouter(r *gin.Engine) {
 	protec.Use(middleware.Authenticate())
 	{
 		protec.GET("/api/user/me", user.GetUser())
+		protec.POST("/api/logout", user.Logout())
 
 		// Users
 		protec.GET("/api/users", user.GetHandler())

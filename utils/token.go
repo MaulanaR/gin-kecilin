@@ -1,10 +1,14 @@
 package utils
 
 import (
+	"context"
 	"errors"
 	"time"
 
 	"github.com/golang-jwt/jwt"
+	"github.com/maulanar/gin-kecilin/database"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -35,6 +39,24 @@ func ValidateToken(token string) (*Claims, error) {
 	}
 	if !tkn.Valid {
 		return nil, errors.New("Invalid token")
+	}
+
+	// validate token to users
+	// filter to table users, to check token is valid or not
+	filter := bson.M{
+		"user_id": claims.UserID,
+		"$or": []bson.M{
+			{"token": token},
+			{"refresh_token": token},
+		},
+	}
+	var dtUser any
+	err = database.OpenCollection("users").FindOne(context.Background(), filter).Decode(&dtUser)
+	if err != nil {
+		if errors.Is(err, mongo.ErrNoDocuments) {
+			return nil, errors.New("Invalid token or logged out")
+		}
+		return nil, err
 	}
 	return claims, nil
 }

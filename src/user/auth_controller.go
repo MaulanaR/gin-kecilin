@@ -125,7 +125,7 @@ func Login() gin.HandlerFunc {
 		FoundUser.RefreshToken = &refreshToken
 
 		// update token
-		_, err = Collection().UpdateOne(ctx, bson.M{"email": user.Email}, bson.M{"$set": bson.M{"token": token, "refreshToken": refreshToken, "updated_at": time.Now()}})
+		_, err = Collection().UpdateOne(ctx, bson.M{"email": user.Email}, bson.M{"$set": bson.M{"token": token, "refresh_token": refreshToken, "updated_at": time.Now()}})
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return
@@ -162,5 +162,31 @@ func GetUser() gin.HandlerFunc {
 		}
 		user.Password = nil
 		c.JSON(http.StatusOK, user)
+	}
+}
+
+func Logout() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+		defer cancel()
+
+		claims, _ := c.Get("claims")
+		tokenClaim, ok := claims.(*utils.Claims)
+		if !ok {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid token claims"})
+			return
+		}
+
+		userID := tokenClaim.UserID
+
+		filter := bson.M{"user_id": userID}
+		update := bson.M{"$set": bson.M{"token": nil, "refresh_token": nil}}
+		_, err := Collection().UpdateOne(ctx, filter, update)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+			return
+		}
+
+		c.JSON(http.StatusOK, gin.H{"message": "User logged out successfully"})
 	}
 }
