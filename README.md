@@ -30,4 +30,14 @@ Project ini terdiri dari 3 modul utama:
 
 ---
 
-✦ Jalankan project ini untuk eksplorasi modul dan relasi dasar antara **contacts** ↔ **cctvs**.
+## 🚀 Dockerized Setup
+
+Project ini sudah di-*containerize* menggunakan **Docker** dan **docker-compose**.
+
+### 1. Prasyarat
+- Sudah terinstall **Docker** dan **docker-compose**.
+- Pastikan port `8080` dan `27017` tidak digunakan aplikasi lain.
+
+### 2. Jalankan dengan docker-compose
+```bash
+docker compose up -d

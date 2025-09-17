@@ -2,15 +2,18 @@ package user
 
 import (
 	"context"
-	"gin/utils"
+	"errors"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/maulanar/gin-kecilin/utils"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 var valildator = validator.New()
@@ -92,6 +95,10 @@ func Login() gin.HandlerFunc {
 		// validate user login
 		err := Collection().FindOne(ctx, bson.M{"email": user.Email}).Decode(&FoundUser)
 		if err != nil {
+			if errors.Is(err, mongo.ErrNoDocuments) {
+				c.JSON(http.StatusBadRequest, gin.H{"error": "Email not found, please check again!"})
+				return
+			}
 			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return
 		}

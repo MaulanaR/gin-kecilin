@@ -1,18 +1,19 @@
 package routes
 
 import (
-	"gin/middleware"
-	"gin/src/cctv"
-	"gin/src/contact"
-	"gin/src/user"
 	"net/http"
+
+	"github.com/maulanar/gin-kecilin/middleware"
+	"github.com/maulanar/gin-kecilin/src/cctv"
+	"github.com/maulanar/gin-kecilin/src/contact"
+	"github.com/maulanar/gin-kecilin/src/user"
 
 	"github.com/gin-gonic/gin"
 )
 
 func SetRouter(r *gin.Engine) {
 	// Server status
-	r.GET("/ping", func(c *gin.Context) {
+	r.GET("/api/ping", func(c *gin.Context) {
 		c.String(http.StatusOK, "pong, Server Online !")
 	})
 

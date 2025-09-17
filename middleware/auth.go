@@ -1,10 +1,11 @@
 package middleware
 
 import (
-	"gin/utils"
 	"log"
 	"net/http"
 	"strings"
+
+	"github.com/maulanar/gin-kecilin/utils"
 
 	"github.com/gin-gonic/gin"
 )

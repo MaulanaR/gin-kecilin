@@ -1,0 +1,9 @@
+.vscode
+.git
+.gitignore
+db/
+tmp/
+*.log
+*.env.local
+node_modules
+bin

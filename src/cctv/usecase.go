@@ -3,10 +3,11 @@ package cctv
 import (
 	"context"
 	"errors"
-	"gin/src/contact"
-	"gin/utils"
 	"math"
 	"time"
+
+	"github.com/maulanar/gin-kecilin/src/contact"
+	"github.com/maulanar/gin-kecilin/utils"
 
 	"github.com/go-playground/validator/v10"
 	"go.mongodb.org/mongo-driver/bson"

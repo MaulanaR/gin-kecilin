@@ -37,7 +37,7 @@ func InitEnv() error {
 		DB_NAME = v
 	}
 	if v := os.Getenv("SECRETKEY"); v == "" {
-		SECRETKEY = "maulana"
+		SECRETKEY = ""
 	} else {
 		SECRETKEY = v
 	}

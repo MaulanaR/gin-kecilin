@@ -1,10 +1,11 @@
-package db
+package database
 
 import (
 	"context"
-	"gin/config"
 	"log"
 	"time"
+
+	"github.com/maulanar/gin-kecilin/config"
 
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

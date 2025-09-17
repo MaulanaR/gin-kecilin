@@ -3,9 +3,10 @@ package contact
 import (
 	"context"
 	"errors"
-	"gin/utils"
 	"math"
 	"time"
+
+	"github.com/maulanar/gin-kecilin/utils"
 
 	"github.com/go-playground/validator/v10"
 	"go.mongodb.org/mongo-driver/bson"

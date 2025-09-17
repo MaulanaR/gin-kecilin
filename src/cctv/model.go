@@ -1,9 +1,10 @@
 package cctv
 
 import (
-	"gin/db"
-	"gin/src/contact"
 	"time"
+
+	"github.com/maulanar/gin-kecilin/database"
+	"github.com/maulanar/gin-kecilin/src/contact"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -36,5 +37,5 @@ var AllowedSortFields = map[string]bool{
 }
 
 func Collection() *mongo.Collection {
-	return db.OpenCollection("cctvs")
+	return database.OpenCollection("cctvs")
 }

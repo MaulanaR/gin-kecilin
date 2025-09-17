@@ -1,11 +1,12 @@
 package main
 
 import (
-	"gin/config"
-	"gin/db"
-	"gin/routes"
-	"gin/utils"
 	"log"
+
+	"github.com/maulanar/gin-kecilin/config"
+	"github.com/maulanar/gin-kecilin/database"
+	"github.com/maulanar/gin-kecilin/routes"
+	"github.com/maulanar/gin-kecilin/utils"
 
 	"github.com/gin-gonic/gin"
 )
@@ -13,7 +14,7 @@ import (
 func main() {
 	r := gin.Default()
 	config.Init()
-	db.Init()
+	database.Init()
 
 	//set secret key
 	utils.SetJWTKey([]byte(config.SECRETKEY))

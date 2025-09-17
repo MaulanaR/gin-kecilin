@@ -2,11 +2,12 @@ package cctv
 
 import (
 	"context"
-	"gin/utils"
 	"math"
 	"net/http"
 	"strconv"
 	"time"
+
+	"github.com/maulanar/gin-kecilin/utils"
 
 	"github.com/gin-gonic/gin"
 )

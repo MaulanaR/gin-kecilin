@@ -1,0 +1,32 @@
+services:
+  mongo:
+    image: mongodb/mongodb-community-server:7.0-ubi8
+    container_name: cctv_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    image: maulanar/gin_maulana_kecilin:latest
+    container_name: gin_cctv_api
+    depends_on:
+      mongo:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: 8080
+      DB_URL: "mongodb://mongo:27017/"
+      DB_NAME: "cctv_db"
+      SECRETKEY: "ABC123"
+    restart: unless-stopped
+
+volumes:
+  mongo_data:

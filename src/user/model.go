@@ -1,9 +1,9 @@
 package user
 
 import (
-	"gin/db"
 	"time"
 
+	"github.com/maulanar/gin-kecilin/database"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 )
@@ -32,5 +32,5 @@ var AllowedSortFields = map[string]bool{
 }
 
 func Collection() *mongo.Collection {
-	return db.OpenCollection("users")
+	return database.OpenCollection("users")
 }
